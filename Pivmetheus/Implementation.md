@@ -1,22 +1,6 @@
 # Implementation
 
-
-## Table of content
-
-4.1. [Ballots and Counting](#41-ballots-and-counting)
-
-4.2. [Additional Means Of Protecting the N<sup>2</sup> Vote](#42-additional-means-of-protecting-the-n2-vote)
-
-4.3. [S layer](#43-s-layer)
-
-4.4. [I layer](#44-i-layer)
-
-4.5. [Data Retention](#45-data-retention)
-
-4.6. [Onramp](#46-onramp)
-
-
-## 4.1 Ballots and Counting
+## Ballots and Counting
 
 The main issue is that voters should have no need for 'insincere voting'. Rather, they should be prompted to include enough information in their ballot that the voting algorithm can always signify their vote in the most preferable way. First 'pass to post', or basic voting, suffers because its minimal information only really supports a two party system. I expect the  many of you are already familiar with the problems of first pass to post, and may be familiar with the apparent alternatives of both 'iterative ranked' voting, and +,0,- voting, and so may wish to skip some of the following text.
 
@@ -28,7 +12,7 @@ However, there is a subtle relation between the two systems.
 	PIVX doesn't intend to rely on elections or must-pass-something votes, if they  even choose to have them at all. The PIVX community will be voting on  proposals and ammendments directly, which is uniquely different from an election, in that the 'null' option, to change nothing, must be present.  To solve this, we simply need to include null within the ranks. To operate a must-choose vote, we need only to remove the null option. A ballot for three competing options may look something like this:
 
 
-  1.  <span>B</span>
+1.  <span>B</span>
 
 2.  <span>A</span>
 
@@ -62,7 +46,7 @@ the number of pairwise comparisons she loses. The candidates with the highest sc
 
 
 
-## 4.2 Additional Means Of Protecting the N<sup>2</sup> Vote
+## Additional Means Of Protecting the N<sup>2</sup> Vote
 The N<sup>2</sup> voting layer is the most important voting layer, as it clearly actually represents two dimensions according to the exponent.  Simultaneously, the N<sup>2</sup> layer is also the most difficult layer to successfully capture because capturing it means getting vote data from individuals who are small investors, who are only minimally to moderately interested in the outcome of the system. Besides potential predation from the other layers, voter apathy threatens to weaken the effectiveness of the N<sup>2</sup> voting layer.  Besides the information timing section above. NOTE without adequate protection of the N<sup>2</sup> vote, the model collapses. some options for strengthening this layer are as described below.  Some of these options are more popular than others, so they are listed in an order of reasonable implementation priority. The idea is to implement them starting at the top, and if more N<sup>2</sup> protection seems to be required, then we implement further down the list. Number six is far down the list because it is both unpopular and difficult to implement.  However, early voting count results could show it to be necessary. :
 
 1. Power voting as described above, and exponents of 0.6 and 1.66 for N<sup>2</sup> and I layers respectively.
@@ -75,24 +59,24 @@ The N<sup>2</sup> voting layer is the most important voting layer, as it clearly
 8. Any other accounts or classes of accounts that can be positively identified as N<sup>2</sup> accounts could be factored into N<sup>2</sup> in order to bolster the meaning and stability of the layer. An interesting option for implementing this would be to offer additional N<sup>2</sup> vote to public keys that show large amounts of trading.  Accomplishing this would require some careful management of network calculation math. An adequate mathematics solution could potentially raise the priority of this option.
 9. Anonymous Identity Models (not under consideration at this time)
 
-## 4.3 S layer
+## S layer
 
 The S layer is unique amongst the layers because holding PIVX is not proof of network support function.  Proper proof of network support function can only be acquired by evidence of masternode or staking rewards. Therefore, rather than using current PIVX holdings, we propose counting the PIVX rewarded to an address within a period of time, probably 2 weeks. Then we run that number through the same no dancing filter, or exponential moving average as the other two layers to acquire vote weight so as to substantiate that an account is participating actively over a period of time. We then offer 50% of the vote power of the S layer to masternodes and 50% of it to staking nodes.  While some discussion of creating a concept of “tokens” for accounting vote weights for this layer, we see this as unnecessary at the time, but possibly valuable for future projects.
 
 If vote nodes become a necessity because of voter apathy, then the vote node holders would acquire 10% of the S layer such that the percentages become 45/45/10.  That 14% would not belong to accounts being represented by vote nodes, but rather to the vote node accounts themselves.  In this case, every vote node representing more than a threshold number of accounts (start with 20) and also  (start with) over 5000 PIVs would share equally with other qualifying  vote nodes the 14% of S layer vote.
 
-## 4.4 I layer
+## I layer
 The I layer has the weakness of a relatively small sample size. To help alleviate this problem, we shall limit all accounts to not more than 4% total vote (tunable at after observation).  This also blocks some attack vectors, such as single, large I account vote blocking attack.
 
 
-## 4.5 Data Retention
+## Data Retention
 Because of the need to minimize the size of the block chain, It will be an advantage store the vote data separately from the chain. The actual vote results are crucial information and need to be on the chain.  In order to verify the legitimacy of the vote data and the chain, a hash of the vote data blocks should be stored on chain, and something like 50 of the next block creations should sign off the hash of the vote data in digital signatures. Over half of such block creation signatures chain-verifies the vote, and less than that invalidates it. The Vote data shall be retained for roughly 1 year before being archived. Vote data older than one year no longer shall be subject to scrutiny, and shall only be available from any nodes who voluntarily wish to archive the data.
 
 If the coders however prefer, it should be acceptable to create a second chain, which maintains the vote data separately from the transaction data.
 
 
 
-## 4.6 Onramp
+## Onramp
 Avoiding an identity model requires extra complexity in this system, which then imposes a step-wise implementation. A reasonable ordering of the steps for implementation is as follows. This schedule should be somewhat flexible, based on the needs of other projects and availability of coding talent.
 
 1. Create an S layer by adding staking vote together to the currently used masternode vote.

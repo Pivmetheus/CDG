@@ -1,30 +1,6 @@
 # Strategic Weight Analysis
 
-## Table of content
-
-3.1. [Derivation of Approach](#31-derivation-of-approach)
-
-3.2. [Three Layers](#32-three-layers)
-
-3.3. [Avoiding Information Starvation](#33-avoiding-information-starvation)
-
-3.4. [Management of Feedback Loop Dynamic](#34-management-of-feedback-loop-dynamic)
-
-3.5. [Staking Nodes](#35-staking-nodes)
-
-3.6. [Masternodes](#36-masternodes)
-
-3.7. [Vote Nodes](#37-vote-nodes)
-
-3.8. [General Users](#38-general-users)
-
-3.9. [The No Dancing Filter](#39-the-no-dancing-filter)
-
-3.10. [Thresholding](#310-thresholding)
-
-3.11. [Meta-Consensus](#311-meta-consensus)
-
-## 3.1 Derivation of Approach
+## Derivation of Approach
 
 Many issues, models, and proposals have been considered for the purpose of achieving consensus regarding private cryptocurrency development.  Our model utilizes many components of these other proposals. Simpler models may have been desirable, but could not satisfy all of these important values and conditions:
 
@@ -54,11 +30,11 @@ For the other two layers, two approximations have been identified, which we beli
 
 #### The system will be simple for the end user to use because all of the voting math is handled by computer. The voting/feedback system will not initially require massive amounts of re-coding the system because the voting math will primarily operate on data already present in the system.
 
-## 3.2 Three Layers
+## Three Layers
 If layers substantially disagree with one another on an event, then there is evidence that the proposals involved need deeper understanding and development. Aligning each of the layers with a legitimate dimension of value further tunes the voting apparatus to protect value in the system. It also shows us the dynamics of that value as we watch the voting play out over time.
 
 
-## 3.3 Avoiding Information Starvation
+## Avoiding Information Starvation
 
 
 Optimal decisions can't be made from a dearth of the information needed to accurately represent reality. . The infamous 'Tweed' declared, "I don't care who does the electing, so long as I get to do the nominating", because in a two party decision, by the time both candidates are picked, many of the important decisions have already been made. This principle remains widely and effectively exploited in complicated ways. However, proper information management makes it difficult to play these sort of tricks. For those interested, these videos provide additional information concerning "first pass to post" and Tweed tactics, respectively https://www.youtube.com/watch?v=s7tWHJfhiyo&list=PLPZwr9rnuY9pr4InUaLfjmX757UfE-DVY  https://www.youtube.com/watch?v=PJy8vTu66tE
@@ -71,7 +47,7 @@ To solve the two party system and vote option monopoly problem, we need a combin
 
 
 
-## 3.4 Management of Feedback Loop Dynamic
+## Management of Feedback Loop Dynamic
 https://www.youtube.com/watch?v=5HNmsBaVmZs
 
 The above video demonstrates that experts are concerned about government decision processes being influenced by special interest groups. What they blatantly fail to note is that
@@ -90,16 +66,16 @@ https://en.wikipedia.org/wiki/Dunbar's_number
 
 
 
-## 3.5 Staking Nodes
+## Staking Nodes
 
 Because staking is a network support function, staking node feedback will be counted into the network support layer proportionally with the number of PIVX staked. Unless there is further information to process, Staking nodes and Masternodes may each acquire 50% of this layers vote, although this is a tunable quantity. Many have argued against using vote nodes, leaving vote nodes as a last resort for acquiring adequate vote activity in the N<sup>2</sup> layer. Since vote nodes are a last resort to acquiring adequate N<sup>2</sup> vote, this layer may shift if vote nodes are actually implemented so that vote node holders (not those whom they represent) acquire something like 7% of the total S layer vote.
 
-## 3.6 Masternodes
+## Masternodes
 
 Masternodes currently present us with a conundrum, because they are pre-defined to be accounts of exactly 10k PIVX. Individuals won't be holding their own preferred coin numbers in those accounts. It is known that many individuals hold quite a few masternodes, but without explicit data, this can not be directly counted into the voting scheme. Unless the community opts to link masternode accounts, masternodes can only be assumed to be components of larger holdings, therefore we reduce their network effect vote by a predefined amount, and increase their intelligence vote by the same amount. 35% decrease/increase. For exponents of 0.6 and 1.66, this equates to the assumption that masternodes will typically be held by people who have 30k PIVX total.  This is an approximation, but without better information, we can not make the approximation more correct.
 
 
-## 3.7 Vote Nodes
+## Vote Nodes
 Because most investors won't have the time and energy to invest in making community decisions, delegation is an important option to consider. Discussions of doing delegation have had rather mixed results, leaving the option for delegation as neither popular nor unpopular. Therefore, we choose to defer the decision as to whether or not delegation is actually used to a later date when it can be elucidated as to how necessary the option is. < br />
 The primary value of the concept of vote nodes is in the creation of delegates who can fill that role.  Unlike traditional governing systems, Individuals would not have delegates imposed upon them by majority rule, but will have the freedom to choose their favorite delegate. This helps to get a wealth of information into the decision making system.
 
@@ -111,10 +87,10 @@ Vote nodes should be allowed to implement delegated proof of stake (DPOS) or sta
 
 
 
-## 3.8 General Users
+## General Users
 All users vote according to PIVX holdings in layers N<sup>2</sup> and I according to the powers (exponents) given to those layers. This includes all node holders. However, there will be a minimum holdings requirement which may change over time. Early suggestion for this number is 500 PIVs. If this number falls too low, it becomes too easy for large holders to steal N<sup>2</sup> vote as well as too easy for uninterested parties to influence decisions. If it rises too high, it becomes too difficult for small stake holders to acquire that voting power.
 
-## 3.9 The No Dancing Filter
+## The No Dancing Filter
 A consensus model deriving its voting weights simply  by what each wallet is holding at voting time would  erroneously overrepresent traders who'd only recently bought their PIVX. Value comes from those who hold their PIVs, as should the votes. A good measure for this is the 'Exponential Moving Average'.
 The EMA has a few neat properties. If the holdings on a wallet were to suddenly jump from zero to H, the EMA would steadily respond as
 
@@ -138,7 +114,7 @@ Smaller C result in faster t decay.  If C is needed to provide a specific decay 
 
 c=ln(lambda)
 
-## 3.10 Thresholding
+## Thresholding
 
 ### For standard votes
 
@@ -160,7 +136,7 @@ Unnoted by politicians and attorneys whith whom I have spoken, there is a second
 
 Furthermore, there is the possibility that a large percentage of the public does not deliver information. The earlier threshold of required vote power exercised for a vote to pass was 10%.  A suggestion of 5% has been made in the interim. I believe that starting with 5% is a correct model, to assure mobility, and allowing this value to be altered as history writes something to look at. It will be appropriate to include into voting code a separable matrix structure of tuning parameters which may be both retained and updated over time so as to validate old decisions as well as make new ones.
 
-## 3.11 Meta-Consensus
+## Meta-Consensus
 It would be naive to assume the ability to anticipate all possible dynamics of a consensus system which involves complex feedback, stochastic inputs, and therefore chaotic movement. Therefore, it is prudent that there are built in procedures for adapting the consensus mechanism itself. However, since Meta-consensus is on a more abstract level, it's impact can be even more unpredictable and sensitive to change than the consensus mechanism itself. For this reason, it is necessary that controls for Meta-Consensus be even more restrictive, with high threshold (see 2.9) and limited manipulability.
 
 ### For Meta-votes

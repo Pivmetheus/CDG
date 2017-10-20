@@ -1,16 +1,6 @@
 # Discussion and Reference
 
-## Table of content
-
-6.1. [Options for Optimization](#61-options-for-optimization)
-
-6.2. [Example Instruments for System Guidance Panel](#62-example-instruments-for-system-guidance-panel)
-
-6.3. [Math Reference](#63-math-reference)
-
-6.4. [Other References](#64-other-references)
-
-## 6.1. Options for Optimization
+## Options for Optimization
 
 **These Options Are Not Necessary, but May be Advantageous.**
 
@@ -35,7 +25,7 @@ They have the disadvantage of making it more difficult for people to understand 
 * use of vote history to adjust vote weights
 
 
-## 6.2 Example Instruments for System Guidance Panel
+## Example Instruments for System Guidance Panel
 
 Some of these measures have already been implemented.
 See:  http://www.presstab.pw/phpexplorer/PIVX/index.php,  http://pivx.masternodes.pro/
@@ -60,7 +50,7 @@ See:  http://www.presstab.pw/phpexplorer/PIVX/index.php,  http://pivx.masternode
 * Estimated dump pool size
 
 
-## 6.3. Math Reference
+## Math Reference
 
 The network calculation used to determine a decision based on the individuals votes will take the general form of a 4 layered feed-forward network with the first three layers being non-thresholding layers while the fourth implements a complex system of interrelated thresholds. These four network math layers are not to be confused with the lay-person voting layers. They are calculation machinery, and not human-subjective function description. The input data will take the form of vectors of ternary numbers (+/0/-).
 
@@ -71,7 +61,7 @@ The third network layer will contain a list of the primary value dimensions (or 
 The fourth network layer sums data from the vectors of integers and scalars from the third layer into a mutually suppressive thresholding system. The vector data is split from vectors into scalars. Each node of the fourth layer represents one of the elements of the vectors.  Each node of the fourth layer fills a thresholding function and outputs a single boolean number, all, except for one of which being 0 (not chosen)  while one of which is 1 (chosen).
 
 
-## 6.4 Other References
+## Other References
 
 https://en.wikipedia.org/wiki/Electoral_system <br />
 https://en.wikipedia.org/wiki/Social_choice_theory  <br />

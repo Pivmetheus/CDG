@@ -1,12 +1,6 @@
 # Examples
 
-## Table of content
-
-5.1. [Example Voting Math](#51-example-voting-math)
-
-5.2. [Scenario 1](#52-scenario-1)
-
-## 5.1 Example Voting Math
+## Example Voting Math
 
 For vote options A,B,C,D, null and public keys labelled 1,2,3 ...  consider the following data matrix:
 
@@ -57,7 +51,7 @@ The weighted copeland scores clearly reveal b as the next loser, leaving only A 
 
 
 
-## 5.2 Scenario 1
+## Scenario 1
 
 There are quite a few roles the people who involve themselves with PIVX
 may play. Whether it is one or many, these roles will determine their

@@ -1,3 +1,5 @@
+# Abstract
+
 This proposal is the foremost consensus model for both representing and protecting the small investors in the voting pool.
 The following issues to be balanced into this model have been chosen:
 
@@ -27,7 +29,7 @@ The following issues to be balanced into this model have been chosen:
 
 The model presented here is designed to respect the fundamental value model of a cryptocurrency. N<sup>2</sup>SI  (described in detail later) It is also designed to respect the various conundrums of voting that result from currently used voting models that are starved of information. The last challenge to be managed is to curtail the arrival of common feedback loop misbehaviors that are evident in current politics as well as common feedback systems.
 
- This document describes how a voting architecture may be capable of solving sundry known voting quandries, notably those arising from an inadequate collection of information to make proper decisions, as well as the growth of the unhealthy feedback behaviour which is already recognizable from contemporary political systems, and their tendency to extreme wealth inequality.  A major tool for handling these issues is an advanced balloting system, which allows voters to both rank their preferences, and provide negative feedback.
+This document describes how a voting architecture may be capable of solving sundry known voting quandries, notably those arising from an inadequate collection of information to make proper decisions, as well as the growth of the unhealthy feedback behaviour which is already recognizable from contemporary political systems, and their tendency to extreme wealth inequality.  A major tool for handling these issues is an advanced balloting system, which allows voters to both rank their preferences, and provide negative feedback.
 
 Consensus information for PIVX denies explicit identity. It must come from the blockchain itself and be private key verifiable.  Under this architecture, it is very difficult, without sacrificing privacy, to prevent the wealthy, from gaining proportionally greater representation, since they can always feign the appearance of many small investors if they so desire. Therefore, in order to protect small investors from virtually being robbed by the wealthy, who can make stronger votes, it remains to provide an incentive for large investors to consolidate their holdings which is greater than their incentives to feign small investors. 
 

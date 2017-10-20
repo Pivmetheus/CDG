@@ -1,65 +1,37 @@
-# Pivmetheus consensus-proposal
+# Introduction
 
-Because an advanced digital asset deserves an advanced consensus model!
+Wherever we begin, we and the world around us all will change with time. In subtle, complex and unpredictable ways. <br />
+Like the performance of a long journey, the decisions that we make will determine where we end more so than the place of our beginning.  <br />
+Iteratively, the world will become a reflection of us, and we a reflection of the world. <br /> 
+Our pathways shall be defined by the rules of the game, both imposed and chosen, understood and misunderstood. <br />
+Because choosing a consensus model is choosing a fate, we believe that the nature of the consensus model chosen is extremely important. <br /> 
+We believe it is worth the effort to build the model very carefully and very well.  
+
+The model presented in this document is designed for premium performance, and optimum protection of PIVX future.  Years of research as well as the ideas and experience of many mathematicians, coders, and systems theorists were carefully considered and puzzled together into a document that we believe we can put a great deal of faith in.  Please bear with us as we attempt to explain the reasoning behind the model, the value proposition that it offers, and the fundamental details of it.  
+
+Because of special characteristics of a private exchange medium, this model requires more mathematics as well as more understanding of social systems than other models presented in order to actually deliver on its claims rather than just make them.  Nevertheless, an important part of the design is that the coding effort required should not be more than 30 to 50% higher than what might be spent on some of the other models.  Designing a consensus model, like designing software,  is something of an information game. Therefore, that coding effort will have to be spread over a long period of time, one of the required ingredients of intelligence.  Nevertheless, a functional system should appear long before it is perfected. 
+
+There are many goals of the project (soon to be listed). However, the primary goals are: 
+
+A. To achieve the difficult task of successfully protecting and balancing the values of crucial sub-groups of the community, most notably the small investors. Simultaneously, we wish to protect the economic value of the system. <br />
+B. To create a system that is fair, healthy, and long lasting by eliminating the common ugly behaviors of voting/feedback/consensus systems before they get started. 
+
+From the perspective of the current Masternode owners, the shift in voting power under PIVmetheus will appear on the surface to be a loss of roughly 60% of their leverage.  However, leverage is not always such a straight forward issue.  The fact that a small group of individuals are in control of something can make that something less desirable. We expect the leverage to reappear for the Masternode owners as this model should raise the value of their holdings by means of helping to convince new investors that their investments are more safe with a model that protects them and grows their investments.  
+
+Adding a consensus model to a crypto-currency allows it to navigate the future. The same consensus model also allows it to make mistakes, substantially change direction, and/or engage in exploitive behaviors.  A consensus model has the ability to change the currency to the point that it is hardly any more recognizable as the original model.  Furthermore, the consensus model exposes the currency model to a large set of complicated information feedback dynamics that can cause all kinds of unexpected long term problems.  This kind of problem commonly takes the form of parasitic and predator/prey dynamic, but colors and trends in decisions may also have major impacts, both positive and negative.  Because of such issues, designing a consensus model for a crypto-currency is not an easy task and should not at all be taken lightly.  The nature of the consensus model has a major impact on the nature of decisions that come out of it.  
+
+PIVmetheus is designed to provide the highest possible intelligence in its decisions. It is an instrument that uses an understanding of feedback mathematics, intelligence theory and social theory. It weighs and balances the values of differing classes of participants carefully against one another.  It hones each decision into an arrow that points towards success.  In order to do this, it uses carefully designed mathematics that will have strong abilities to actually differentiate between those differing classes of individuals without ever discovering any of their personal details.   This may sound like a bold claim, but careful examinations of the methods will reveal that it can be done.  Then, each of the three layers developed operates together like not stereo, but three angle vision on the subject matter, capable of assessing each circumstance from all three view angles.  
+
+The earlier model presented by presstab clearly had this general intention, but did not include the mechanistic required to properly achieve the goal.  Therefore, one way to view this model is that it’s presstab’s model, re-designed so that it actually works. 
+
+One of the most common issues we have come up against while designing the model is a collection of naive beliefs about human nature and what to expect out of simpler forms of consensus.  Money systems are banks waiting to be robbed. All of history is littered with endless variations of bank robbery. The 2008 housing bubble collapse which motivated the beginning of cryptocurrencies is just one of endless examples. Every time we see a bank vault, it is a reminder of that history.  Simultaneously, bank vaults have proved incapable of solving the bank robbery problem, for rob bankers are just as problematic as bank robbers.  
+
+Market gaming is an old art and profession. We have entire cities full of individuals who excel at gaming. These people play both sides of the market, buying and selling. They get together strategically in groups and use complicated collections of computer-bots, advertising, political and legal leverage, news, and now even social media to push markets up and down without substantially spending their own resources.  Bots turn markets into gambling casinos. Then, they capitalize on the fears and mistakes of large numbers of traders who do not understand that the cards have been intentionally and strategically stacked against them. Cryptos and ICOs are a hot-bed of this kind of activity, which is why China attacked the ICO market.  The public has been robbed of many billions of dollars by pump’n dump ICOs.  Currency supplies of entire nations have been repeatedly destroyed by means of market gaming. Market gaming is so extremely lucrative that it attracts and pays for high class mathematicians, IT talent, and legal talent.  It buys off the opinions of asessment experts.  It even incentivizes the destruction of large numbers of large corporations, for just as money can be made by building something … in the markets, it can be made by destroying something, or even just temporarily damaging it.  It is possible to place bets on either the rise or fall of a market in various ways, and if you can control what you are betting on, then you just might be a robber.  A voting system which lends control of an asset to a small sub-group of the owners of the asset exacerbates the possibilities of using complicated strategies to game wealth away from its proper owners.  Examination of historical records shows that PIVX its self has already fallen prey to classic “pump’n dump” strategies. 
+
+PIVmetheus is designed to put a heavy damper on such dark dynamics by allowing all participants an appropriate quantity of leverage in the system therefore denying control of the currency to small exploitive groups.  Nevertheless, may it please be understood, that cryptocurrencies will eventually require an entire garrison of protection strategies to help make the markets and the currencies safe for the public to use.  This very issue is in fact the purpose of “The Federal Reserve”, “The IMF” and other intelligence groups for their respective bodies of currency.   If installed, PIVmetheus will be a gigantic step towards making crypto-currency safe for public consumption and for the future of man kind.  PIVmetheus will make PIVX into an icon of high intelligence and value in cryptocurrency.  PIVmetheus will also continue to show the world that crypto-currencies can do it better than old, inferior currency models.  
+
+Join with us in an effort to let go of the inadequacies and misunderstandings of the past. Join with us as we build currency safety directly into the currency model its self in a fully transparent fashion. Join with us as we build a world where creation, not manipulation, is the primary value of the economic model.  And may those of us unwilling to create, change their minds and also become creators of a greater future than what can be reached with the old paradigms.
 
 ## Disclaimers
 
 **While this document often makes use of the traditional word "vote", it is important to understand that it only appears to be traditional voting from the users perspective. The internal maths will be in the form of weighted network feedback. This appears to be the only means of accomplishing all of the named goals in the document. Therefore, it is appropriate to replace the word "vote" with a phrase such as "inform" or "informing" or "information acquirement" or "decision making event". The use of the word "vote" is for mental convenience of the reader only, and the meaning of the word shall be switched to an altered state defined by this paragraph.**
-
-## Table of content
-
-1. [Overview](./Overview.md)
-2. [Abstract](./Abstract.md)
-3. [Strategic Weight Analysis](./Strategic%20Weight%20Analysis.md)
-
-    3.1. [Derivation of Approach](./Strategic%20Weight%20Analysis.md#31-derivation-of-approach)
-
-    3.2. [Three Layers](./Strategic%20Weight%20Analysis.md#32-three-layers)
-
-    3.3. [Avoiding Information Starvation](./Strategic%20Weight%20Analysis.md#33-avoiding-information-starvation)
-
-    3.4. [Management of Feedback Loop Dynamic](./Strategic%20Weight%20Analysis.md#34-management-of-feedback-loop-dynamic)
-
-    3.5. [Staking Nodes](./Strategic%20Weight%20Analysis.md#35-staking-nodes)
-
-    3.6. [Masternodes](./Strategic%20Weight%20Analysis.md#36-masternodes)
-
-    3.7. [Vote Nodes](./Strategic%20Weight%20Analysis.md#37-vote-nodes)
-
-    3.8. [General Users](./Strategic%20Weight%20Analysis.md#38-general-users)
-
-    3.9. [The No Dancing Filter](./Strategic%20Weight%20Analysis.md#39-the-no-dancing-filter)
-
-    3.10. [Thresholding](./Strategic%20Weight%20Analysis.md#310-thresholding)
-
-    3.11. [Meta-Consensus](./Strategic%20Weight%20Analysis.md#311-meta-consensus)
-
-4. [Implementation](./Implementation.md)
-
-    4.1. [Ballots and Counting](./Implementation.md#41-ballots-and-counting)
-
-    4.2. [Additional Means Of Protecting the N<sup>2</sup> Vote](./Implementation.md#42-additional-means-of-protecting-the-n2-vote)
-
-    4.3. [S layer](./Implementation.md#43-s-layer)
-
-    4.4. [I layer](./Implementation.md#44-i-layer)
-
-    4.5. [Data Retention](./Implementation.md#45-data-retention)
-
-    4.6. [Onramp](./Implementation.md#46-onramp)
-
-5. [Examples](./examples.md)
-
-    5.1. [Example Voting Math](./examples.md#51-example-voting-math)
-
-    5.2. [Scenario 1](./examples.md#52-scenario-1)
-
-6. [Discussion and Reference](./Discussion%20and%20Reference.md)
-
-    6.1. [Options for Optimization](./Discussion%20and%20Reference.md#61-options-for-optimization)
-
-    6.2. [Example Instruments for System Guidance Panel](./Discussion%20and%20Reference.md#62-example-instruments-for-system-guidance-panel)
-
-    6.3. [Math Reference](./Discussion%20and%20Reference.md#63-math-reference)
-
-    6.4. [Other References](./Discussion%20and%20Reference.md#64-other-references)
