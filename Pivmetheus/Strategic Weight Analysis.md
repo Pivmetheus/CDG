@@ -94,7 +94,7 @@ All users vote according to PIVX holdings in layers N<sup>2</sup> and I accordin
 A consensus model deriving its voting weights simply  by what each wallet is holding at voting time would  erroneously overrepresent traders who'd only recently bought their PIVX. Value comes from those who hold their PIVs, as should the votes. A good measure for this is the 'Exponential Moving Average'.
 The EMA has a few neat properties. If the holdings on a wallet were to suddenly jump from zero to H, the EMA would steadily respond as
 
-f(t)=H(1-e^{-ct})
+$$f(t)=H(1-e^{-ct})$$
 
 If the wallets value jumped back to zero, it's EMA would respond at the rate
 
