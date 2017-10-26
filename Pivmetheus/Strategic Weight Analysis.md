@@ -103,8 +103,6 @@ W<sub>N</sub> = W<sub>N-1</sub>c + (1-c)
 
 now set W<sub>0</sub> to 0 and W<sub>6</sub> to 0.63
 
-$\qquad$
-
 W<sub>1</sub> &#09;= 1-c
 
 W<sub>2</sub> &#09;= (1-c) &#215; c + (1-c)
