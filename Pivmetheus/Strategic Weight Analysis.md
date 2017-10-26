@@ -110,10 +110,10 @@ If it happens these calculations are too cumbersome to perform on every transact
 $$f_n=(1-C)H(n)+(C)f_{n-1}$$
 
 The electronics engineers know this equation as an 'IIR' filter.
-Smaller C result in faster t decay.  If C is needed to provide a specific decay rate as fractional reduction per interval T, $$0<\lambda<1$$, the inversion is quite simple.
+Smaller C result in faster t decay.  If C is needed to provide a specific decay rate as fractional reduction per interval T, $$ 0< \lambda < 1 $$,  the inversion is quite simple.
 
 $$c=ln(\lambda)$$
-
+ 
 ## Thresholding
 
 ### For standard votes
