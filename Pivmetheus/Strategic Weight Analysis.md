@@ -101,7 +101,7 @@ Now suppose we run the filter equation once every month. Each W<sub>N</sub> woul
 
 W<sub>N</sub> = W<sub>N-1</sub>c + (1-c)
 
-now set W<sub>0</sub> to 0 and W<sub>6</sub> to 0.63
+now set W<sub>0</sub> to 0 and W<sub>4</sub> to 0.63
 
 W<sub>1</sub> &#09;= 1-c
 
