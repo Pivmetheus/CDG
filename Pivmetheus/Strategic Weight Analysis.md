@@ -91,40 +91,28 @@ Vote nodes should be allowed to implement delegated proof of stake (DPOS) or sta
 All users vote according to PIVX holdings in layers N<sup>2</sup> and I according to the powers (exponents) given to those layers. This includes all node holders. However, there will be a minimum holdings requirement which may change over time. Early suggestion for this number is 500 PIVs. If this number falls too low, it becomes too easy for large holders to steal N<sup>2</sup> vote as well as too easy for uninterested parties to influence decisions. If it rises too high, it becomes too difficult for small stake holders to acquire that voting power.
 
 ## The No Dancing Filter
-Without delaying the shift in voting power related to the movement of PIVs in the system, large players can simply move their pivs into a favorite position for each separate vote. Clearly this ruins the 3 layer model. Therefore, we enforce vote timing such that voting power takes roughly 1 year to fully transfer from one address to another. Therefore a voter must choose his favorite layer in general and not for specific votes.
-It was requested for vote data and computation to be minimal. If we examine the plethora of signal processing strategies for smoothing and delaying signals, the solution that requires the least computation and memory is the single pole IIR filter of following design. IIR stands for infinite impulse response, which is the converse of finite impulse response. FIR filters are basically just as good, possibly better under circumstances, but more expensive to implement. We will call it "the no dancing filter"
+A consensus model deriving its voting weights simply  by what each wallet is holding at voting time would  erroneously overrepresent traders who'd only recently bought their PIVX. Value comes from those who hold their PIVs, as should the votes. A good measure for this is the 'Exponential Moving Average'.
+The EMA has a few neat properties. If the holdings on a wallet were to suddenly jump from zero to H, the EMA would steadily respond as
 
-W<sub>N</sub> = W<sub>N-1</sub>C + A &#215; (1-c)
+f(t)=H(1-e^{-ct})
 
-This is an extremely simple IIR filter which produces a series of vote weights W<sub>N</sub> given a filter constant c between 0 and 1, and a time varying account value A. The filter constant c is tuned in terms of what we call "time constants" the word time constant derives out of math/physics and the number e, but in this case, that is merely tradition. What a time constant means is that after one time constant of time, the system has settled to 63% of its final settling position. If we decide to have a time constant of four months, then it will take about eight months for most of an accounts voting power to accrue.
-Now suppose we run the filter equation once every month. Each W<sub>N</sub> would then be valid for one month of time. Four months then requires 4 iterations of the equation. So to get the proper value of c for a time constant of 4 months, we set A to 1, therefore eliminating it. And tune the equation to get us a value of 0.63 after four iterations.
+If the wallets value jumped back to zero, it's EMA would respond at the rate
 
-W<sub>N</sub> = W<sub>N-1</sub>c + (1-c)
+f(t)=He^{-ct}
 
-now set W<sub>0</sub> to 0 and W<sub>4</sub> to 0.63
+Where (H(t)) is the wallet at time t. To be implemented, the EMA can be calculated by tracking the time and values between transactions. For example, suppose the last transaction occured T in the past, then:
 
-W<sub>1</sub> &#09;= 1-c
+f(H(t)) = (1-e^{-cT})H(t)+e^{-cT}f(H(t-T))
 
-W<sub>2</sub> &#09;= (1-c) &#215; c + (1-c)
 
-&#09;= c-c<sup>2</sup> +1 -c
+If it happens these calculations are too cumbersome to perform on every transaction, an even further simplified model can be used, which simply approximates a wallets holdings by its contents iteratively say, every two weeks, so that if $e^{-cT}=C$ and the iteration is n, then
 
-&#09;= 1-c<sup>2</sup>
+f_n=(1-C)H(n)+(C)f_{n-1}
 
-W<sub>3</sub> &#09;= (1-c<sup>2</sup>) &#215; c + 1-c
+The electronics engineers know this equation as an 'IIR' filter.
+Smaller C result in faster t decay.  If C is needed to provide a specific decay rate as fractional reduction per interval T, 0<\lambda<1, the inversion is quite simple.
 
-&#09;= c-c<sup>3</sup> + 1 - c
-
-&#09;= 1-c<sup>3</sup>
-
-W<sub>4</sub> &#09;= 1-c<sup>4</sup> = 0.63
-
-c<sup>4</sup> &#09;= 0.37
-
-c = 0.37<sup>1/4</sup> = 0.779920671
-
-This would be a very inexpensive, fundamental means of dampening vote movement to foil vote hopping. It is of further interest to compare W<sub>N</sub> and A and choose the smaller of the two for vote weight. This would instantly kill voting for emptied accounts which would be an important part of breaking destroy and cache-in market strategies. In other words, if you use your vote to destroy the currency, then you're still holding the currency and therefore are subject to the damage. The choose the smaller rule also foils some additional, more subtle attack vectors.
-It should not be necessary to use this filter for the S layer, but rather only for the N<sup>2</sup> and I layers.
+c=ln(lambda)
 
 ## Thresholding
 
