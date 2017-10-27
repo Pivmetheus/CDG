@@ -100,17 +100,17 @@ If the wallets value jumped back to zero, it's EMA would respond at the rate
 
 $$f(t)=He^{-ct}$$
 
-Where (H(t)) is the wallet at time t. To be implemented, the EMA can be calculated by tracking the time and values between transactions. For example, suppose the last transaction occured T in the past, then:
+Where $$(H(t))$$ is the wallet at time $$t$$. To be implemented, the EMA can be calculated by tracking the time and values between transactions. For example, suppose the last transaction occured $$T$$ in the past, then:
 
 $$f(H(t)) = (1-e^{-cT})H(t)+e^{-cT}f(H(t-T))$$
 
 
-If it happens these calculations are too cumbersome to perform on every transaction, an even further simplified model can be used, which simply approximates a wallets holdings by its contents iteratively say, every two weeks, so that if $e^{-cT}=C$ and the iteration is n, then
+If it happens these calculations are too cumbersome to perform on every transaction, an even further simplified model can be used, which simply approximates a wallets holdings by its contents iteratively say, every two weeks, so that if $$ e^{-cT}=C $$ and the iteration is n, then
 
 $$f_n=(1-C)H(n)+(C)f_{n-1}$$
 
 The electronics engineers know this equation as an 'IIR' filter.
-Smaller C result in faster t decay.  If C is needed to provide a specific decay rate as fractional reduction per interval T, $$ 0< \lambda < 1 $$,  the inversion is quite simple.
+Smaller $$C$$ result in faster $$t$$ decay.  If $$C$$ is needed to provide a specific decay rate as fractional reduction per interval $$T$$, $$ 0< \lambda < 1 $$,  the inversion is quite simple.
 
 $$c=ln(\lambda)$$
  
