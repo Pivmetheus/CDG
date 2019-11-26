@@ -53,7 +53,9 @@ Equations are provided in the PIVMetheus white paper, but for here, we shall sim
 Next, we note that our power voting layer or group which favors small investors is a good representation of the concept of “network effect”.  We afford it the label: “network effect”  or N^2.  We feel confident that our power voting layer which favors large investors will often build and support the intelligence of the system. We label it the “intelligence” or I layer. We note that those who support the network function such as the Masternodes and Stakers, because of their similarity inherently belong together in the S or “network strength” layer.  At this point, we have identified a 3 layer model which correctly protects the value of our network. 
 We further recognize at this point that while our exact voting maths and methods may vary, “network effect”, “network strength” and “network intelligence” will always remain legitimate descriptions of values to be protected.  Therefore, as we acquire new information and methods, we can retain a correct model by classifying voting power carefully under these three labels. 
 
-If voting shows its self to be unreliable or “apathetic” for the network effect layer, Delegates, and delegated proof of stake may be built into “vote nodes” to support the weakness. 
+We generate at this point a term to name this form of voting architecture, "Value Boat". This term should create the proper imagery as a multidimensional entity protecting its self from outside forces such that all external surfaces must be properly maintained for long term success. 
+
+If voting shows its self to be unreliable or “apathetic” for the network effect layer, Delegates, and delegated proof of stake may be built into “vote nodes” to support the weakness. So far, voter apathy appears already to impose this feature. 
 Many have requested the construction of an “easy voting utility” to encourage voting by making the task much easier. This should be a part of future plans. 
 
 ## Voting Math
